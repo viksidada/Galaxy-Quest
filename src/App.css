@@ -1,4 +1,14 @@
+body {
+    background-image: url("./components/assets/space.jpg");
+    color: whitesmoke;
+}
+
 .App {
     text-align: center;
     padding: 5%;
+    margin-top: 20px;
+}
+
+.App-title {
+     font-size: 27px;
 }
