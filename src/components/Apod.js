@@ -21,7 +21,7 @@ class Apod extends Component {
     render() {
         return (
             <div className = "apod">
-                <button className = "btn btn-primary" onClick={() => this.imageOfTheDay()}>APOD</button>
+                <button className = "btn btn-danger" onClick={() => this.imageOfTheDay()}>APOD</button>
             </div>
 
         );

@@ -13,7 +13,7 @@ class App extends Component {
 
     search() {
         const BASE_URL = "https://images-api.nasa.gov/search?";
-        const FETCH_URL = `${BASE_URL}api_key=xgPytM5A2pKFsLVmcVx2DaadyNEyM0owehKMsnPa`;
+        const FETCH_URL = `${BASE_URL}q=${this.state.query}&api_key=xgPytM5A2pKFsLVmcVx2DaadyNEyM0owehKMsnPa`;
 
 
         fetch(FETCH_URL, {
@@ -21,7 +21,7 @@ class App extends Component {
         })
             .then(response => response.json())
 
-           .then(result => console.log("json", result));
+           .then(search => console.log("json", search));
 
     }
 
@@ -35,7 +35,7 @@ class App extends Component {
                     <InputGroup>
                         <FormControl
                             type = "text"
-                            placeholder="Search For An Artist"
+                            placeholder="Search for Space Stuff"
                             value = {this.state.query}
                             onChange = {event => {this.setState({query: event.target.value})}}
                             onKeyPress = {event => {
@@ -49,12 +49,11 @@ class App extends Component {
                         </InputGroup.Addon>
                     </InputGroup>
                 </FormGroup>
-                <div className="Profile">
-                    <div>Artist Picture</div>
-                    <div>Artist Name</div>
+                <div id="Menu">
+                    <div className = "Menu-list">Mars Rover Picture</div>
+                    <div className = "Menu-list">EPIC</div>
+                    <div className = "Menu-list"><Apod/></div>
                 </div>
-                <div className="Gallery">Gallery</div>
-                <div><Apod/></div>
             </div>
         );
     }

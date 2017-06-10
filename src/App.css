@@ -12,3 +12,14 @@ body {
 .App-title {
      font-size: 27px;
 }
+
+#Menu {
+    float: left;
+    width: 100%;
+}
+
+.Menu-list {
+    display: inline-block;
+    margin: 0px;
+    width: 33.33%;
+}
