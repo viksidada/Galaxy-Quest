@@ -40,7 +40,7 @@ class MarsRover extends Component {
                 <p><strong>This image is being sourced through a web call being made to a NASA Web API endpoint</strong></p>
                 <div id = "Mars-images">
                     <h3>{this.state.cameraName}</h3><br/>
-                    <img id ="Mars-curiosity" src={this.state.imgSrc} /><br/>
+                    <img id ="Mars-curiosity" src={this.state.imgSrc} alt = "mars pic" /><br/>
 
                 </div>
             </div>
