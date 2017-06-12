@@ -23,3 +23,23 @@ body {
     margin: 0px;
     width: 33.33%;
 }
+
+.apod-explain {
+    font-size: medium;
+}
+
+#apod-pic {
+    width: 100%;
+    height: 400px;
+}
+
+#Aod-bar {
+    display: inline-block;
+    margin: 0px;
+    width: 33.33%;
+}
+
+#Mars-curiosity {
+    width: 100%;
+    height: 600px;
+}

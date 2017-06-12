@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "../App.css";
+import {browserHistory} from 'react-router';
 
 class Apod extends Component {
     constructor(props) {
@@ -11,6 +12,11 @@ class Apod extends Component {
             title: null
         };
     }
+
+    goBack() {
+       browserHistory.push("/");
+    }
+
 
     componentDidMount() {
         const BASE_URL = "https://api.nasa.gov/planetary/apod?";
@@ -34,8 +40,12 @@ class Apod extends Component {
 
     render() {
         return (
-            <div className = "page-title">
-                <h1>{this.state.title}</h1>
+            <div className="Apod-page">
+                <h1 className = "page-title">{this.state.title}</h1><br/>
+                <button className = "btn btn-info" onClick = {() => this.goBack()}>Go Back</button>
+                <h2 className = "apod-explain">{this.state.explanation}</h2><br/>
+                <h3 >{this.state.date}</h3><br/>
+                <img id = "apod-pic" src={this.state.hdurl} alt="space pic"/>
             </div>
         );
     }

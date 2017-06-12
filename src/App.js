@@ -29,6 +29,10 @@ class App extends Component {
         browserHistory.push("/apod");
     }
 
+    goToMarsRover() {
+        browserHistory.push("/marsRover");
+    }
+
     render() {
         return (
             <div className="App">
@@ -54,12 +58,16 @@ class App extends Component {
                     </InputGroup>
                 </FormGroup>
                 <div id="Menu">
-                    <div className = "Menu-list">Mars Rover Picture</div>
-                    <div className = "Menu-list">EPIC</div>
                     <div className = "Menu-list">
-                        <div className = "apod">
-                            <button className = "btn btn-danger" onClick={() => this.goToApod()}>APOD</button>
-                        </div>
+                        <button className = "btn btn-success"
+                                onClick={() => this.goToMarsRover()}>Mars Rover Curiosity Pictures
+                        </button>
+                    </div>
+                    <div className = "Menu-list">
+                        <button className = "btn btn-danger"
+                                onClick={() => this.goToApod()}>Astronomical Picture Of the Day
+                        </button>
+
                     </div>
                 </div>
             </div>
