@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./App.css";
 import {FormControl, FormGroup, InputGroup, Glyphicon} from 'react-bootstrap';
-import Apod from "./components/Apod.js";
+import {browserHistory} from 'react-router';
 
 class App extends Component {
     constructor(props) {
@@ -23,6 +23,10 @@ class App extends Component {
 
            .then(search => console.log("json", search));
 
+    }
+
+    goToApod() {
+        browserHistory.push("/apod");
     }
 
     render() {
@@ -52,7 +56,11 @@ class App extends Component {
                 <div id="Menu">
                     <div className = "Menu-list">Mars Rover Picture</div>
                     <div className = "Menu-list">EPIC</div>
-                    <div className = "Menu-list"><Apod/></div>
+                    <div className = "Menu-list">
+                        <div className = "apod">
+                            <button className = "btn btn-danger" onClick={() => this.goToApod()}>APOD</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
