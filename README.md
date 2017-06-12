@@ -1,3 +1,5 @@
+|* Search Function Not Completely Implemented Due To NASA WEb API being down. WOuld complete once the service is back up *|
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
